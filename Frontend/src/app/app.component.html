@@ -1,0 +1,54 @@
+<div class="container">
+  <nav class="navbar">
+    <div class="container-fluid ">
+      <div class="heading d-flex ">
+        <div class="logoItem"><img src="/assets/images/appLogo.png" alt="logo" class="logo"></div>
+        <div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        
+      </div>
+     
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active navbar-toggler" aria-current="page" routerLink="/home" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active navbar-toggler" aria-current="page" routerLink="/profile" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active navbar-toggler" aria-current="page" routerLink="/login" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Log In</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active navbar-toggler" aria-current="page" routerLink="/register" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Register</a>
+          </li>
+
+          <li class="nav-item" *ngIf="admin == 'ROLE_ADMIN'">
+            <a class="nav-link active navbar-toggler" aria-current="page" routerLink="/admin" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Admin</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active navbar-toggler" aria-current="page" (click)="logout()" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="cursor: pointer;">Log Out</a>
+          </li>
+        
+        </ul>
+      </div>
+      
+      
+    </div>
+    
+    </nav>
+</div>
+
+
+
+<!-- <app-landing-page></app-landing-page> -->
+
+
+<router-outlet></router-outlet>
+
