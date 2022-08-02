@@ -87,6 +87,10 @@ db.mongoose
   require('./app/routes/auth.routes')(app);
   require('./app/routes/user.routes')(app);
 
+app.get('/', (req, res) => {
+  res.send('Server Online')
+})
+
 
 app.listen(app.get('port'), () => {
     console.info(`Server listen on port ${app.get('port')}`);
